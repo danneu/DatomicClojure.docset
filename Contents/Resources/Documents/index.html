@@ -1,0 +1,1019 @@
+
+<!-- saved from url=(0032)http://docs.datomic.com/clojure/ -->
+<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>datomic.api - Datomic Clojure API documentation</title>
+    <link href="http://docs.datomic.com/clojure/static/favicon.png" rel="icon">
+    <link href="http://docs.datomic.com/clojure/static/favicon.png" rel="shortcut icon">
+    <link media="all" type="text/css" href="./index_files/clojure.css" rel="stylesheet">
+    <link media="all" type="text/css" href="./index_files/wiki.css" rel="stylesheet">
+    <link media="all" type="text/css" href="./index_files/internal.css" rel="stylesheet">
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="http://docs.datomic.com/clojure/index.html"><img alt="Clojure" height="100" width="100" src="./index_files/clojure-icon.gif"></a>
+	<h1><a title="page header title" id="page-header" href="http://docs.datomic.com/clojure/index.html">Datomic Clojure API</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">Datomic Clojure</span> <span id="version"></span> API</span><br>
+    <ul>
+      <li><a class="wiki_link" href="http://docs.datomic.com/clojure/index.html">Overview</a></li>
+      <li><a class="wiki_link" href="http://docs.datomic.com/clojure/api-index.html">API Index</a></li>
+    </ul>
+    
+    
+    <a href="http://clojure.org/" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="http://docs.datomic.com/clojure/#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/add-listener">add-listener</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/as-of">as-of</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/as-of-t">as-of-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/attribute">attribute</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/basis-t">basis-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/connect">connect</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/create-database">create-database</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/datoms">datoms</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/db">db</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/delete-database">delete-database</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/entid">entid</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/entid-at">entid-at</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/entity">entity</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/entity-db">entity-db</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/filter">filter</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/function">function</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/gc-storage">gc-storage</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/history">history</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/ident">ident</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/index-range">index-range</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/invoke">invoke</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/is-filtered">is-filtered</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/log">log</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/next-t">next-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/part">part</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/q">q</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/release">release</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/remove-tx-report-queue">remove-tx-report-queue</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/rename-database">rename-database</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/request-index">request-index</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/resolve-tempid">resolve-tempid</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/seek-datoms">seek-datoms</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/shutdown">shutdown</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/since">since</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/since-t">since-t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/squuid">squuid</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/squuid-time-millis">squuid-time-millis</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/sync">sync</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/sync-excise">sync-excise</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/sync-index">sync-index</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/sync-schema">sync-schema</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/t->tx">t-&gt;tx</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/tempid">tempid</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/touch">touch</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/transact">transact</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/transact-async">transact-async</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/tx->t">tx-&gt;t</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/tx-range">tx-range</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/tx-report-queue">tx-report-queue</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="http://docs.datomic.com/clojure/#datomic.api/with">with</a>
+    </div>
+    <br>
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">datomic.api</span>
+  - <span id="header-project">Datomic Clojure</span> <span id="header-version"></span>
+  </h1>
+
+<br>Full namespace name: <span id="long-name">datomic.api</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br>
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/add-listener">add-listener</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (add-listener fut f executor)
+</pre>
+  <pre id="var-docstr">Register a completion listener for the future. The listener
+will run once and only once, if and when the future's work is
+complete. If the future has completed already, the listener will
+run immediately.  Ordering of listeners is not guaranteed.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/as-of">as-of</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (as-of db t)
+</pre>
+  <pre id="var-docstr">Returns the value of the database as of some point t, inclusive.
+t can be a transaction number, transaction ID, or Date.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/as-of-t">as-of-t</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (as-of-t db)
+</pre>
+  <pre id="var-docstr">Returns the as-of point, or nil if none</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/attribute">attribute</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (attribute db attrid)
+</pre>
+  <pre id="var-docstr">Returns information about the attribute with the given id or ident.
+Supports ILookup interface for key-based access. Supported keys are:
+
+:id, :ident, :cardinality, :value-type, :unique, :indexed, :has-avet,
+:no-history, :is-component, :fulltext</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/basis-t">basis-t</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (basis-t db)
+</pre>
+  <pre id="var-docstr">Returns the t of the most recent transaction reachable via this db value.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/connect">connect</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (connect uri)
+</pre>
+  <pre id="var-docstr">Connects to the specified database, returing a Connection.
+URI syntax ({} indicate place holders to fill in, [] indicate optional):
+
+DynamoDB using roles:
+datomic:ddb://{aws-region}/{dynamodb-table}/{db-name}
+
+DynamoDB using keys (use roles if possible):
+datomic:ddb://{aws-region}/{dynamodb-table}/{db-name}?aws_access_key_id={XXX}&amp;aws_secret_key={YYY}
+
+DynamoDB Local
+datomic:ddb-local://{endpoint:port}/{dynamodb-table}/{db-name}?aws_access_key_id={XXX}&amp;aws_secret_key={YYY}
+
+Riak:
+datomic:riak://{host}[:{port}]/{bucket}/{dbname}[?interface=http|https|protobuf]
+(interface defaults to protobuf)
+
+Couchbase:
+datomic:couchbase://{host}/{bucket}/{dbname}[?password={xxx}]
+
+SQL:
+datomic:sql://{db-name}?{jdbc-url}
+
+Infinispan:
+datomic:inf://{cluster-member-host}:{port}/{db-name}
+
+Cassandra:
+datomic:cass://{cluster-member-host}[:{port}]/{keyspace}.{table}/{db-name}[?user={user}&amp;password={pwd}][&amp;ssl=true]
+
+Dev Appliance: 
+datomic:dev://{transactor-host}:{port}/{db-name}
+
+Free transactor integrated storage:
+datomic:free://{transactor-host}:{port}/{db-name}
+
+In-process Memory:
+datomic:mem://{db-name}
+
+The dev and free protocols use two additional ports to communicate
+with storage.  By default, these ports are one and two higher than
+the specified transactor port. You can override the default by
+specifying h2-port and h2-web-port in the query string, e.g.
+
+  datomic:free://localhost:4334/mydb?h2-port=6000&amp;h2-web-port=7000
+
+The sql protocol also supports a map format instead of the URI
+string. This is to enable specifying objects that can't be
+embedded in URI strings, like DataSources. The format for the
+SQL map is:
+
+  {:protocol :sql                  ;; keyword or string
+   :db-name "myDb"               ;; keyword or string
+
+   :data-source aDataSourceObject
+    ;; OR
+   :factory aCallableReturningConnection}
+
+Note only one of data-source or factory should be supplied.
+
+The cass protocol also supports a map format instead of the URI
+string. This is to enable specifying objects that can't be embedded
+in URI strings. The format for the Cassandra map is:
+
+  {:protocol :cass                 ;; keyword or string
+   :db-name "myDb"               ;; keyword or string
+   :table "myKeyspace.myTable"
+   :cluster aClusterObject}
+
+Note that aClusterObject must be an instance of type
+com.datastax.driver.core.Cluster.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/create-database">create-database</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (create-database uri)
+</pre>
+  <pre id="var-docstr">Creates database specified by uri. Returns true if the
+database was created, false if it already exists. See connect
+for a description of the URI syntax.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/datoms">datoms</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (datoms db index &amp; components)
+</pre>
+  <pre id="var-docstr">Raw access to the index data, by index. The index must be supplied,
+   and, optionally, one or more leading components of the index can be
+   supplied to narrow the result.
+	 :eavt and :aevt indexes will contain all datoms
+	 :avet contains datoms for attributes where :db/index = true.
+	 :vaet contains datoms for attributes of :db.type/ref
+         :vaet is the reverse index</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/db">db</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (db connection)
+</pre>
+  <pre id="var-docstr">Retrieves a value of the database for reading. Does not
+communicate with the transactor, nor block.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/delete-database">delete-database</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (delete-database uri)
+</pre>
+  <pre id="var-docstr">Deletes the database specified by uri. Returns true if the
+delete occurred. See connect for a description of the URI
+syntax.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/entid">entid</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (entid db ident)
+</pre>
+  <pre id="var-docstr">Returns the entity id associated with a symbolic keyword, or the id
+itself if passed.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/entid-at">entid-at</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (entid-at db part t-or-date)
+</pre>
+  <pre id="var-docstr">Returns a fabricated entity id in the supplied partition whose
+	 T component is at or after the supplied t. Entity ids sort by partition,
+	 then T component, such T components interleaving with transaction numbers.
+	 Thus this function can be used to fabricate a time-based entity id component for use
+	 in e.g. seek-datoms.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/entity">entity</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (entity db eid)
+</pre>
+  <pre id="var-docstr">Returns a dynamic map of the entity's attributes for the given id, ident or lookup ref.
+Entities implement
+  clojure.lang.Associative
+  clojure.lang.ILookup
+  clojure.lang.IPersistentCollection
+  clojure.lang.Seqable
+  datomic.Entity</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/entity-db">entity-db</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (entity-db entity)
+</pre>
+  <pre id="var-docstr">Returns the database value that is the basis for this entity</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/filter">filter</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (filter db pred)
+</pre>
+  <pre id="var-docstr">Returns the value of the database containing only datoms
+satisfying the predicate. the predicate will be passed two arguments -
+the unfiltered db and a Datom. Chained calls compose the predicate with
+'and'</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/function">function</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (function m)
+</pre>
+  <pre id="var-docstr">Generates a function object given a map with required keys
+
+:lang  - clojure or java
+:params - a list of parameter names used in the code
+:code - a string or data containing the code of the body
+
+and optional keys
+
+:imports - a list to be spliced into (import ...)
+:requires - a list to be spliced into (require ...)
+
+Clojure code should consist of a single expression in which
+the params will be in scope.
+
+Returns a function object that implements IFn, and is a record with
+keys :lang, :params, :code, :imports, and :requires.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/gc-storage">gc-storage</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (gc-storage connection older-than)
+</pre>
+  <pre id="var-docstr">Allow storage to reclaim garbage older than a certain age.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/history">history</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (history db)
+</pre>
+  <pre id="var-docstr">Returns a special database containing all assertions and
+retractions across time. This special database can be used for
+datoms and index-range calls and queries, but not for entity or
+with calls. as-of and since bounds are also supported. Note that
+queries will get all of the additions and retractions, which can be
+distinguished by the fifth datom field :added (true for add/assert)
+[e a v tx added]</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/ident">ident</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (ident db eid)
+</pre>
+  <pre id="var-docstr">Returns the keyword associated with an id, or the key itself if passed.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/index-range">index-range</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (index-range db attrid start end)
+</pre>
+  <pre id="var-docstr">Returns an Iterable range of datoms in index named by attrid,
+starting at start, or from beginning if start is nil, and ending
+before end, or through end of attr index if end is nil.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/invoke">invoke</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (invoke db eid-or-ident &amp; args)
+</pre>
+  <pre id="var-docstr">Lookup the database function named by eid-or-ident, and call it with args.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/is-filtered">is-filtered</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (is-filtered db)
+</pre>
+  <pre id="var-docstr">Returns true if db has had a filter set with filter</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/log">log</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (log connection)
+</pre>
+  <pre id="var-docstr">Retrieves a value of the log for reading. Note: the mem db
+has no log, and thus for it log will return null.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/next-t">next-t</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (next-t db)
+</pre>
+  <pre id="var-docstr">Returns the t one beyond the highest reachable via this db value.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/part">part</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (part eid)
+</pre>
+  <pre id="var-docstr">Return the partition associated with an entity id.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/q">q</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (q query &amp; inputs)
+</pre>
+  <pre id="var-docstr">Executes a query against inputs.
+
+ Inputs are data sources e.g. a database value retrieved from
+ Connection.db, a list of lists, and/or rules. If only one data
+ source is provided, no :in section is required, else the :in
+ section describes the inputs. 
+
+ query can be a map, list, or string:
+
+ The query map form is {:find vars-and-aggregates
+                        :with vars-included-but-not-returned
+                        :in sources
+                        :where clauses}
+ where vars, sources and clauses are lists.
+
+:with is optional, and names vars to be kept in the aggregation set but
+ not returned.
+
+ The query list form is [:find ?var1 ?var2 ...
+                         :with ?var3 ...
+                         :in $src1 $src2 ...
+                         :where clause1 clause2 ...]
+ The query list form is converted into the map form internally.
+
+ The query string form is a string which, when read, results
+ in a query list form or query map form.
+
+ Query parse results are cached.
+
+ Returns a collection of result tuples, as list, with the
+ first item in each list corresponding to ?var1, etc.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/release">release</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (release conn)
+</pre>
+  <pre id="var-docstr">Request the release of resources associated with this connection.  
+Method returns immediately, resources will be released 
+asynchronously. This method should only be called when the entire 
+process is no longer interested in the connection. Note
+that Datomic connections do not adhere to an acquire/use/release 
+pattern.  They are thread-safe, cached, and long lived.  Many 
+processes (e.g. application servers) will never call release.</pre>
+  <span class="var-added"><span id="content">Added in Datomic Clojure version 0.8.3861</span><br></span>
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/remove-tx-report-queue">remove-tx-report-queue</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (remove-tx-report-queue connection)
+</pre>
+  <pre id="var-docstr">Removes the queue associated with this connection.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/rename-database">rename-database</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (rename-database uri new-name)
+</pre>
+  <pre id="var-docstr">Renames the database specified by uri to new-name. Returns
+true if rename succeeded. See connect for a description of the
+URI syntax.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/request-index">request-index</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (request-index connection)
+</pre>
+  <pre id="var-docstr">Schedules a re-index of the database. The re-indexing happens
+asynchronously. Returns true if re-index is scheduled.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/resolve-tempid">resolve-tempid</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (resolve-tempid db tempids tempid)
+</pre>
+  <pre id="var-docstr">Resolve a tempid to the actual id assigned in a database. The
+tempids object must come from the :tempids member returned through
+transact or transact-async.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/seek-datoms">seek-datoms</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (seek-datoms db index &amp; components)
+</pre>
+  <pre id="var-docstr">Raw access to the index data, by index. The index must be supplied,
+	 and, optionally, one or more leading components of the index can be supplied for the initial search.
+	 Note that, unlike the datoms function, there need not be an exact match on the supplied components.
+	 The iteration will begin at or after the point in the index where the components would reside.
+	 Further, the iteration is not bound by the supplied components, and will only terminate
+	 at the end of the index. Thus you will have to supply your own termination logic, as you rarely
+	 want the entire index. As such, seek-datoms is for more advanced applications, and datoms should be preferred
+	 wherever it is adequate. See also - entid-at.
+         :eavt and :aevt indexes will contain all datoms
+	 :avet contains datoms for attributes where :db/index = true.
+	 :vaet contains datoms for attributes of :db.type/ref
+         :vaet is the reverse index</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/shutdown">shutdown</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (shutdown shutdown-clojure)
+</pre>
+  <pre id="var-docstr">Shutdown all peer resources.  This method should be called as
+part of clean shutdown of a JVM process.  Will release all Connections,
+and, if shutdown-clojure is true, will release Clojure resources.
+Programs written in Clojure can set shutdown-clojure to false if they
+manage Clojure resources (e.g. agents) outside of Datomic; programs
+written in other JVM languages should typically set shutdown-clojure
+to true.</pre>
+  <span class="var-added"><span id="content">Added in Datomic Clojure version 0.8.3861</span><br></span>
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/since">since</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (since db t)
+</pre>
+  <pre id="var-docstr">Returns the value of the database since some point t, exclusive
+t can be a transaction number, transaction ID, or Date.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/since-t">since-t</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (since-t db)
+</pre>
+  <pre id="var-docstr">Returns the since point, or nil if none</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/squuid">squuid</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (squuid)
+</pre>
+  <pre id="var-docstr">Constructs a semi-sequential UUID. Useful for creating UUIDs
+that don't fragment indexes. Returns a UUID whose most significant
+32 bits are currentTimeMillis rounded to seconds.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/squuid-time-millis">squuid-time-millis</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (squuid-time-millis squuid)
+</pre>
+  <pre id="var-docstr">get the time part of a squuid (a UUID created by squuid), in
+the format of System.currentTimeMillis</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/sync">sync</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (sync connection)
+       (sync connection t)
+</pre>
+  <pre id="var-docstr">Used to coordinate with other peers.
+
+When called with a t: returns a future that will acquire a
+database value with basisT &gt;= t. Does not communicate with the
+transactor.
+
+When called with no t: Returns a future that will acquire a
+database value guaranteed to include all transactions that were
+complete at the time sync was called.  Communicates with the
+transactor.
+
+db is the preferred way to get a database value, as it does not
+need to wait nor block. Only use sync when coordination is
+required, and prefer the two-argument version when you have a
+basis t.
+
+The future returned by sync can take arbitrarily long to
+complete.  Waiters should use deref forms that specify a timeout.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/sync-excise">sync-excise</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (sync-excise connection t)
+</pre>
+  <pre id="var-docstr">Used to coordinate with background excision. Returns a
+future that will acquire a database value that is aware of
+excisions through time &lt;= t.
+
+Does not communicate with the transactor, so the future may be
+available immediately.
+
+The future can take arbitrarily long to complete.  Waiters
+should specify a timeout.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/sync-index">sync-index</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (sync-index connection t)
+</pre>
+  <pre id="var-docstr">Used to coordinate with background indexing jobs. Returns a
+future that will acquire a database value that is indexed
+through time &lt;= t.
+
+Does not communicate with the transactor, so the future may be
+available immediately.
+
+The future can take arbitrarily long to complete.  Waiters
+should specify a timeout.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/sync-schema">sync-schema</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (sync-schema connection t)
+</pre>
+  <pre id="var-docstr">Used to coordinate with background schema changes. Returns a
+future that will acquire a database value that is aware of
+all schema changes through time &lt;= t.
+
+Does not communicate with the transactor, so the future may be
+available immediately.
+
+The future can take arbitrarily long to complete.  Waiters
+should specify a timeout.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/t-&gt;tx">t-&gt;tx</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (t-&gt;tx t)
+</pre>
+  <pre id="var-docstr">Return the transaction id associated with a t value.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/tempid">tempid</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (tempid partition)
+       (tempid partition n)
+</pre>
+  <pre id="var-docstr">Generate a tempid in the specified partition. Within the scope
+of a single transaction, tempids map consistently to permanent
+ids. Values of n from -1 to -1000000, inclusive, are reserved for
+user-created tempids.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/touch">touch</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (touch entity)
+</pre>
+  <pre id="var-docstr">Touches all of the attributes of the entity, including any component entities recursively.
+Returns the entity.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/transact">transact</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (transact connection tx-data)
+</pre>
+  <pre id="var-docstr">Submits a transaction to the database for writing. The transaction
+data is sent to the Transactor and, if transactAsync, processed
+asynchronously.
+
+tx-data is a list of lists, each of which specifies a write
+operation, either an assertion, a retraction or the invocation of
+a data function. Each nested list starts with a keyword identifying
+the operation followed by the arguments for the operation.
+
+Returns a completed future that can be used to monitor the completion
+of the transaction. If the transaction commits, the future's value is
+a map containing the following keys:
+
+  :db-before         database value before the transaction
+  :db-after          database value after the transaction
+  :tx-data           collection of Datoms produced by the transaction
+  :tempids           argument to resolve-tempids
+
+The transaction id can be passed to as-of to get the database value
+as of the end of the transaction.
+If the transaction aborts, attempts to get the future's value
+throw a java.util.concurrent.ExecutionException, wrapping a
+java.lang.Error containing error information.
+If the transaction times out, the call to transact itself will
+throw a RuntimeException. The transaction timeout can be set
+via the system property datomic.txTimeoutMsec, and defaults to
+10000 (10 seconds).</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/transact-async">transact-async</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (transact-async connection tx-data)
+</pre>
+  <pre id="var-docstr">Same as transact, but returns its future immediately.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/tx-&gt;t">tx-&gt;t</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (tx-&gt;t tx)
+</pre>
+  <pre id="var-docstr">Return the t value associated with a transaction id.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/tx-range">tx-range</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (tx-range log start end)
+</pre>
+  <pre id="var-docstr">Returns a range of transactions in log, starting at start,
+or from beginning if start is nil, and ending before end, or through
+end of log if end is nil. start and end can be can be a transaction
+number, transaction ID, Date or nil.
+
+Each transaction is a map with the following keys:
+ :t - the T point of the transaction
+ :data -  a Collection of the Datoms asserted/retracted by the transaction</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/tx-report-queue">tx-report-queue</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (tx-report-queue connection)
+</pre>
+  <pre id="var-docstr">Gets the data queue associated with this connection, creating one
+if necessary. At any point in time either zero or one queue is
+associated with a connection. The returned queue may be consumed
+from more than one thread. Note that the returned queue does not
+block producers, and will consume memory until you consume the
+elements from it. Reports will be added to the queue at some point
+after the db has been updated. If this connection originated the
+transaction, the transaction future will be notified first, before
+a report is placed on the queue.
+
+Reports are records with the following keys:
+
+  :db-before    value of database before the transaction
+  :db-after     value of database after the transaction
+  :tx-data      the transaction data in E/A/V/Tx form.</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br>
+  <hr>
+  <h2 id="datomic.api/with">with</h2>
+  <span id="var-type">function</span><br>
+  <pre id="var-usage">Usage: (with db tx-data)
+</pre>
+  <pre id="var-docstr">Applies tx-data to the database. It is as if the data was
+applied in a transaction, but the source of the database is
+unaffected. Takes data in the same format expected by transact, and
+returns a map similar to the map returned by transact.</pre>
+  
+  
+  
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">Copyright (c) Cognitect, Inc. All rights reserved.</div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey&#39;s website." href="http://www.tomhickey.com/">Tom Hickey</a>.<br>
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  
+
+</body></html>
