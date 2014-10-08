@@ -37,8 +37,8 @@ namespace.
       <li><a class="wiki_link" href="http://docs.datomic.com/clojure/index.html">Overview</a></li>
       <li><a class="wiki_link" href="http://docs.datomic.com/clojure/api-index.html">API Index</a></li>
     </ul>
-    
-    
+
+
     <a href="http://clojure.org/" class="wiki_link">Clojure Home</a>
   </div>
 </div>
@@ -134,7 +134,7 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="http://docs.datomic.com/clojure/#datomic.api/sync-schema">sync-schema</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="http://docs.datomic.com/clojure/#datomic.api/t->tx">t-&gt;tx</a>
+      <a href="http://docs.datomic.com/clojure/#datomic.api/t-&gt;tx">t-&gt;tx</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="http://docs.datomic.com/clojure/#datomic.api/tempid">tempid</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -144,7 +144,7 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="http://docs.datomic.com/clojure/#datomic.api/transact-async">transact-async</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="http://docs.datomic.com/clojure/#datomic.api/tx->t">tx-&gt;t</a>
+      <a href="http://docs.datomic.com/clojure/#datomic.api/tx-&gt;t">tx-&gt;t</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="http://docs.datomic.com/clojure/#datomic.api/tx-range">tx-range</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -171,44 +171,44 @@ namespace.
 <div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/add-listener">add-listener</h2>
+  <a name="//apple_ref/cpp/Function/add-listener" class="dashAnchor"><a name="//apple_ref/cpp/Function/add-listener" class="dashAnchor"><h2 id="datomic.api/add-listener">add-listener</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (add-listener fut f executor)
 </pre>
   <pre id="var-docstr">Register a completion listener for the future. The listener
-will run once and only once, if and when the future's work is
+will run once and only once, if and when the future&apos;s work is
 complete. If the future has completed already, the listener will
 run immediately.  Ordering of listeners is not guaranteed.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/as-of">as-of</h2>
+  <a name="//apple_ref/cpp/Function/as-of" class="dashAnchor"><a name="//apple_ref/cpp/Function/as-of" class="dashAnchor"><h2 id="datomic.api/as-of">as-of</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (as-of db t)
 </pre>
   <pre id="var-docstr">Returns the value of the database as of some point t, inclusive.
 t can be a transaction number, transaction ID, or Date.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/as-of-t">as-of-t</h2>
+  <a name="//apple_ref/cpp/Function/as-of-t" class="dashAnchor"><a name="//apple_ref/cpp/Function/as-of-t" class="dashAnchor"><h2 id="datomic.api/as-of-t">as-of-t</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (as-of-t db)
 </pre>
   <pre id="var-docstr">Returns the as-of point, or nil if none</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/attribute">attribute</h2>
+  <a name="//apple_ref/cpp/Function/attribute" class="dashAnchor"><a name="//apple_ref/cpp/Function/attribute" class="dashAnchor"><h2 id="datomic.api/attribute">attribute</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (attribute db attrid)
 </pre>
@@ -217,24 +217,24 @@ Supports ILookup interface for key-based access. Supported keys are:
 
 :id, :ident, :cardinality, :value-type, :unique, :indexed, :has-avet,
 :no-history, :is-component, :fulltext</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/basis-t">basis-t</h2>
+  <a name="//apple_ref/cpp/Function/basis-t" class="dashAnchor"><a name="//apple_ref/cpp/Function/basis-t" class="dashAnchor"><h2 id="datomic.api/basis-t">basis-t</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (basis-t db)
 </pre>
   <pre id="var-docstr">Returns the t of the most recent transaction reachable via this db value.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/connect">connect</h2>
+  <a name="//apple_ref/cpp/Function/connect" class="dashAnchor"><a name="//apple_ref/cpp/Function/connect" class="dashAnchor"><h2 id="datomic.api/connect">connect</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (connect uri)
 </pre>
@@ -266,7 +266,7 @@ datomic:inf://{cluster-member-host}:{port}/{db-name}
 Cassandra:
 datomic:cass://{cluster-member-host}[:{port}]/{keyspace}.{table}/{db-name}[?user={user}&amp;password={pwd}][&amp;ssl=true]
 
-Dev Appliance: 
+Dev Appliance:
 datomic:dev://{transactor-host}:{port}/{db-name}
 
 Free transactor integrated storage:
@@ -283,12 +283,12 @@ specifying h2-port and h2-web-port in the query string, e.g.
   datomic:free://localhost:4334/mydb?h2-port=6000&amp;h2-web-port=7000
 
 The sql protocol also supports a map format instead of the URI
-string. This is to enable specifying objects that can't be
+string. This is to enable specifying objects that can&apos;t be
 embedded in URI strings, like DataSources. The format for the
 SQL map is:
 
   {:protocol :sql                  ;; keyword or string
-   :db-name "myDb"               ;; keyword or string
+   :db-name &quot;myDb&quot;               ;; keyword or string
 
    :data-source aDataSourceObject
     ;; OR
@@ -297,36 +297,36 @@ SQL map is:
 Note only one of data-source or factory should be supplied.
 
 The cass protocol also supports a map format instead of the URI
-string. This is to enable specifying objects that can't be embedded
+string. This is to enable specifying objects that can&apos;t be embedded
 in URI strings. The format for the Cassandra map is:
 
   {:protocol :cass                 ;; keyword or string
-   :db-name "myDb"               ;; keyword or string
-   :table "myKeyspace.myTable"
+   :db-name &quot;myDb&quot;               ;; keyword or string
+   :table &quot;myKeyspace.myTable&quot;
    :cluster aClusterObject}
 
 Note that aClusterObject must be an instance of type
 com.datastax.driver.core.Cluster.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/create-database">create-database</h2>
+  <a name="//apple_ref/cpp/Function/create-database" class="dashAnchor"><a name="//apple_ref/cpp/Function/create-database" class="dashAnchor"><h2 id="datomic.api/create-database">create-database</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (create-database uri)
 </pre>
   <pre id="var-docstr">Creates database specified by uri. Returns true if the
 database was created, false if it already exists. See connect
 for a description of the URI syntax.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/datoms">datoms</h2>
+  <a name="//apple_ref/cpp/Function/datoms" class="dashAnchor"><a name="//apple_ref/cpp/Function/datoms" class="dashAnchor"><h2 id="datomic.api/datoms">datoms</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (datoms db index &amp; components)
 </pre>
@@ -337,50 +337,50 @@ for a description of the URI syntax.</pre>
 	 :avet contains datoms for attributes where :db/index = true.
 	 :vaet contains datoms for attributes of :db.type/ref
          :vaet is the reverse index</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/db">db</h2>
+  <a name="//apple_ref/cpp/Function/db" class="dashAnchor"><a name="//apple_ref/cpp/Function/db" class="dashAnchor"><h2 id="datomic.api/db">db</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (db connection)
 </pre>
   <pre id="var-docstr">Retrieves a value of the database for reading. Does not
 communicate with the transactor, nor block.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/delete-database">delete-database</h2>
+  <a name="//apple_ref/cpp/Function/delete-database" class="dashAnchor"><a name="//apple_ref/cpp/Function/delete-database" class="dashAnchor"><h2 id="datomic.api/delete-database">delete-database</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (delete-database uri)
 </pre>
   <pre id="var-docstr">Deletes the database specified by uri. Returns true if the
 delete occurred. See connect for a description of the URI
 syntax.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/entid">entid</h2>
+  <a name="//apple_ref/cpp/Function/entid" class="dashAnchor"><a name="//apple_ref/cpp/Function/entid" class="dashAnchor"><h2 id="datomic.api/entid">entid</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (entid db ident)
 </pre>
   <pre id="var-docstr">Returns the entity id associated with a symbolic keyword, or the id
 itself if passed.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/entid-at">entid-at</h2>
+  <a name="//apple_ref/cpp/Function/entid-at" class="dashAnchor"><a name="//apple_ref/cpp/Function/entid-at" class="dashAnchor"><h2 id="datomic.api/entid-at">entid-at</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (entid-at db part t-or-date)
 </pre>
@@ -389,55 +389,55 @@ itself if passed.</pre>
 	 then T component, such T components interleaving with transaction numbers.
 	 Thus this function can be used to fabricate a time-based entity id component for use
 	 in e.g. seek-datoms.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/entity">entity</h2>
+  <a name="//apple_ref/cpp/Function/entity" class="dashAnchor"><a name="//apple_ref/cpp/Function/entity" class="dashAnchor"><h2 id="datomic.api/entity">entity</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (entity db eid)
 </pre>
-  <pre id="var-docstr">Returns a dynamic map of the entity's attributes for the given id, ident or lookup ref.
+  <pre id="var-docstr">Returns a dynamic map of the entity&apos;s attributes for the given id, ident or lookup ref.
 Entities implement
   clojure.lang.Associative
   clojure.lang.ILookup
   clojure.lang.IPersistentCollection
   clojure.lang.Seqable
   datomic.Entity</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/entity-db">entity-db</h2>
+  <a name="//apple_ref/cpp/Function/entity-db" class="dashAnchor"><a name="//apple_ref/cpp/Function/entity-db" class="dashAnchor"><h2 id="datomic.api/entity-db">entity-db</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (entity-db entity)
 </pre>
   <pre id="var-docstr">Returns the database value that is the basis for this entity</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/filter">filter</h2>
+  <a name="//apple_ref/cpp/Function/filter" class="dashAnchor"><a name="//apple_ref/cpp/Function/filter" class="dashAnchor"><h2 id="datomic.api/filter">filter</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (filter db pred)
 </pre>
   <pre id="var-docstr">Returns the value of the database containing only datoms
 satisfying the predicate. the predicate will be passed two arguments -
 the unfiltered db and a Datom. Chained calls compose the predicate with
-'and'</pre>
-  
-  
-  
+&apos;and&apos;</pre>
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/function">function</h2>
+  <a name="//apple_ref/cpp/Function/function" class="dashAnchor"><a name="//apple_ref/cpp/Function/function" class="dashAnchor"><h2 id="datomic.api/function">function</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (function m)
 </pre>
@@ -457,24 +457,24 @@ the params will be in scope.
 
 Returns a function object that implements IFn, and is a record with
 keys :lang, :params, :code, :imports, and :requires.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/gc-storage">gc-storage</h2>
+  <a name="//apple_ref/cpp/Function/gc-storage" class="dashAnchor"><a name="//apple_ref/cpp/Function/gc-storage" class="dashAnchor"><h2 id="datomic.api/gc-storage">gc-storage</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (gc-storage connection older-than)
 </pre>
   <pre id="var-docstr">Allow storage to reclaim garbage older than a certain age.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/history">history</h2>
+  <a name="//apple_ref/cpp/Function/history" class="dashAnchor"><a name="//apple_ref/cpp/Function/history" class="dashAnchor"><h2 id="datomic.api/history">history</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (history db)
 </pre>
@@ -485,93 +485,93 @@ with calls. as-of and since bounds are also supported. Note that
 queries will get all of the additions and retractions, which can be
 distinguished by the fifth datom field :added (true for add/assert)
 [e a v tx added]</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/ident">ident</h2>
+  <a name="//apple_ref/cpp/Function/ident" class="dashAnchor"><a name="//apple_ref/cpp/Function/ident" class="dashAnchor"><h2 id="datomic.api/ident">ident</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (ident db eid)
 </pre>
   <pre id="var-docstr">Returns the keyword associated with an id, or the key itself if passed.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/index-range">index-range</h2>
+  <a name="//apple_ref/cpp/Function/index-range" class="dashAnchor"><a name="//apple_ref/cpp/Function/index-range" class="dashAnchor"><h2 id="datomic.api/index-range">index-range</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (index-range db attrid start end)
 </pre>
   <pre id="var-docstr">Returns an Iterable range of datoms in index named by attrid,
 starting at start, or from beginning if start is nil, and ending
 before end, or through end of attr index if end is nil.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/invoke">invoke</h2>
+  <a name="//apple_ref/cpp/Function/invoke" class="dashAnchor"><a name="//apple_ref/cpp/Function/invoke" class="dashAnchor"><h2 id="datomic.api/invoke">invoke</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (invoke db eid-or-ident &amp; args)
 </pre>
   <pre id="var-docstr">Lookup the database function named by eid-or-ident, and call it with args.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/is-filtered">is-filtered</h2>
+  <a name="//apple_ref/cpp/Function/is-filtered" class="dashAnchor"><a name="//apple_ref/cpp/Function/is-filtered" class="dashAnchor"><h2 id="datomic.api/is-filtered">is-filtered</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (is-filtered db)
 </pre>
   <pre id="var-docstr">Returns true if db has had a filter set with filter</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/log">log</h2>
+  <a name="//apple_ref/cpp/Function/log" class="dashAnchor"><a name="//apple_ref/cpp/Function/log" class="dashAnchor"><h2 id="datomic.api/log">log</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (log connection)
 </pre>
   <pre id="var-docstr">Retrieves a value of the log for reading. Note: the mem db
 has no log, and thus for it log will return null.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/next-t">next-t</h2>
+  <a name="//apple_ref/cpp/Function/next-t" class="dashAnchor"><a name="//apple_ref/cpp/Function/next-t" class="dashAnchor"><h2 id="datomic.api/next-t">next-t</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (next-t db)
 </pre>
   <pre id="var-docstr">Returns the t one beyond the highest reachable via this db value.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/part">part</h2>
+  <a name="//apple_ref/cpp/Function/part" class="dashAnchor"><a name="//apple_ref/cpp/Function/part" class="dashAnchor"><h2 id="datomic.api/part">part</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (part eid)
 </pre>
   <pre id="var-docstr">Return the partition associated with an entity id.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/q">q</h2>
+  <a name="//apple_ref/cpp/Function/q" class="dashAnchor"><a name="//apple_ref/cpp/Function/q" class="dashAnchor"><h2 id="datomic.api/q">q</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (q query &amp; inputs)
 </pre>
@@ -580,7 +580,7 @@ has no log, and thus for it log will return null.</pre>
  Inputs are data sources e.g. a database value retrieved from
  Connection.db, a list of lists, and/or rules. If only one data
  source is provided, no :in section is required, else the :in
- section describes the inputs. 
+ section describes the inputs.
 
  query can be a map, list, or string:
 
@@ -606,79 +606,79 @@ has no log, and thus for it log will return null.</pre>
 
  Returns a collection of result tuples, as list, with the
  first item in each list corresponding to ?var1, etc.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/release">release</h2>
+  <a name="//apple_ref/cpp/Function/release" class="dashAnchor"><a name="//apple_ref/cpp/Function/release" class="dashAnchor"><h2 id="datomic.api/release">release</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (release conn)
 </pre>
-  <pre id="var-docstr">Request the release of resources associated with this connection.  
-Method returns immediately, resources will be released 
-asynchronously. This method should only be called when the entire 
+  <pre id="var-docstr">Request the release of resources associated with this connection.
+Method returns immediately, resources will be released
+asynchronously. This method should only be called when the entire
 process is no longer interested in the connection. Note
-that Datomic connections do not adhere to an acquire/use/release 
-pattern.  They are thread-safe, cached, and long lived.  Many 
+that Datomic connections do not adhere to an acquire/use/release
+pattern.  They are thread-safe, cached, and long lived.  Many
 processes (e.g. application servers) will never call release.</pre>
   <span class="var-added"><span id="content">Added in Datomic Clojure version 0.8.3861</span><br></span>
-  
-  
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/remove-tx-report-queue">remove-tx-report-queue</h2>
+  <a name="//apple_ref/cpp/Function/remove-tx-report-queue" class="dashAnchor"><a name="//apple_ref/cpp/Function/remove-tx-report-queue" class="dashAnchor"><h2 id="datomic.api/remove-tx-report-queue">remove-tx-report-queue</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (remove-tx-report-queue connection)
 </pre>
   <pre id="var-docstr">Removes the queue associated with this connection.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/rename-database">rename-database</h2>
+  <a name="//apple_ref/cpp/Function/rename-database" class="dashAnchor"><a name="//apple_ref/cpp/Function/rename-database" class="dashAnchor"><h2 id="datomic.api/rename-database">rename-database</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (rename-database uri new-name)
 </pre>
   <pre id="var-docstr">Renames the database specified by uri to new-name. Returns
 true if rename succeeded. See connect for a description of the
 URI syntax.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/request-index">request-index</h2>
+  <a name="//apple_ref/cpp/Function/request-index" class="dashAnchor"><a name="//apple_ref/cpp/Function/request-index" class="dashAnchor"><h2 id="datomic.api/request-index">request-index</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (request-index connection)
 </pre>
   <pre id="var-docstr">Schedules a re-index of the database. The re-indexing happens
 asynchronously. Returns true if re-index is scheduled.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/resolve-tempid">resolve-tempid</h2>
+  <a name="//apple_ref/cpp/Function/resolve-tempid" class="dashAnchor"><a name="//apple_ref/cpp/Function/resolve-tempid" class="dashAnchor"><h2 id="datomic.api/resolve-tempid">resolve-tempid</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (resolve-tempid db tempids tempid)
 </pre>
   <pre id="var-docstr">Resolve a tempid to the actual id assigned in a database. The
 tempids object must come from the :tempids member returned through
 transact or transact-async.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/seek-datoms">seek-datoms</h2>
+  <a name="//apple_ref/cpp/Function/seek-datoms" class="dashAnchor"><a name="//apple_ref/cpp/Function/seek-datoms" class="dashAnchor"><h2 id="datomic.api/seek-datoms">seek-datoms</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (seek-datoms db index &amp; components)
 </pre>
@@ -694,13 +694,13 @@ transact or transact-async.</pre>
 	 :avet contains datoms for attributes where :db/index = true.
 	 :vaet contains datoms for attributes of :db.type/ref
          :vaet is the reverse index</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/shutdown">shutdown</h2>
+  <a name="//apple_ref/cpp/Function/shutdown" class="dashAnchor"><a name="//apple_ref/cpp/Function/shutdown" class="dashAnchor"><h2 id="datomic.api/shutdown">shutdown</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (shutdown shutdown-clojure)
 </pre>
@@ -712,60 +712,60 @@ manage Clojure resources (e.g. agents) outside of Datomic; programs
 written in other JVM languages should typically set shutdown-clojure
 to true.</pre>
   <span class="var-added"><span id="content">Added in Datomic Clojure version 0.8.3861</span><br></span>
-  
-  
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/since">since</h2>
+  <a name="//apple_ref/cpp/Function/since" class="dashAnchor"><a name="//apple_ref/cpp/Function/since" class="dashAnchor"><h2 id="datomic.api/since">since</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (since db t)
 </pre>
   <pre id="var-docstr">Returns the value of the database since some point t, exclusive
 t can be a transaction number, transaction ID, or Date.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/since-t">since-t</h2>
+  <a name="//apple_ref/cpp/Function/since-t" class="dashAnchor"><a name="//apple_ref/cpp/Function/since-t" class="dashAnchor"><h2 id="datomic.api/since-t">since-t</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (since-t db)
 </pre>
   <pre id="var-docstr">Returns the since point, or nil if none</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/squuid">squuid</h2>
+  <a name="//apple_ref/cpp/Function/squuid" class="dashAnchor"><a name="//apple_ref/cpp/Function/squuid" class="dashAnchor"><h2 id="datomic.api/squuid">squuid</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (squuid)
 </pre>
   <pre id="var-docstr">Constructs a semi-sequential UUID. Useful for creating UUIDs
-that don't fragment indexes. Returns a UUID whose most significant
+that don&apos;t fragment indexes. Returns a UUID whose most significant
 32 bits are currentTimeMillis rounded to seconds.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/squuid-time-millis">squuid-time-millis</h2>
+  <a name="//apple_ref/cpp/Function/squuid-time-millis" class="dashAnchor"><a name="//apple_ref/cpp/Function/squuid-time-millis" class="dashAnchor"><h2 id="datomic.api/squuid-time-millis">squuid-time-millis</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (squuid-time-millis squuid)
 </pre>
   <pre id="var-docstr">get the time part of a squuid (a UUID created by squuid), in
 the format of System.currentTimeMillis</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/sync">sync</h2>
+  <a name="//apple_ref/cpp/Function/sync" class="dashAnchor"><a name="//apple_ref/cpp/Function/sync" class="dashAnchor"><h2 id="datomic.api/sync">sync</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (sync connection)
        (sync connection t)
@@ -788,13 +788,13 @@ basis t.
 
 The future returned by sync can take arbitrarily long to
 complete.  Waiters should use deref forms that specify a timeout.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/sync-excise">sync-excise</h2>
+  <a name="//apple_ref/cpp/Function/sync-excise" class="dashAnchor"><a name="//apple_ref/cpp/Function/sync-excise" class="dashAnchor"><h2 id="datomic.api/sync-excise">sync-excise</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (sync-excise connection t)
 </pre>
@@ -807,13 +807,13 @@ available immediately.
 
 The future can take arbitrarily long to complete.  Waiters
 should specify a timeout.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/sync-index">sync-index</h2>
+  <a name="//apple_ref/cpp/Function/sync-index" class="dashAnchor"><a name="//apple_ref/cpp/Function/sync-index" class="dashAnchor"><h2 id="datomic.api/sync-index">sync-index</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (sync-index connection t)
 </pre>
@@ -826,13 +826,13 @@ available immediately.
 
 The future can take arbitrarily long to complete.  Waiters
 should specify a timeout.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/sync-schema">sync-schema</h2>
+  <a name="//apple_ref/cpp/Function/sync-schema" class="dashAnchor"><a name="//apple_ref/cpp/Function/sync-schema" class="dashAnchor"><h2 id="datomic.api/sync-schema">sync-schema</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (sync-schema connection t)
 </pre>
@@ -845,24 +845,24 @@ available immediately.
 
 The future can take arbitrarily long to complete.  Waiters
 should specify a timeout.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/t-&gt;tx">t-&gt;tx</h2>
+  <a name="//apple_ref/cpp/Function/t-&gt;tx" class="dashAnchor"><a name="//apple_ref/cpp/Function/t-&gt;tx" class="dashAnchor"><h2 id="datomic.api/t-&gt;tx">t-&gt;tx</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (t-&gt;tx t)
 </pre>
   <pre id="var-docstr">Return the transaction id associated with a t value.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/tempid">tempid</h2>
+  <a name="//apple_ref/cpp/Function/tempid" class="dashAnchor"><a name="//apple_ref/cpp/Function/tempid" class="dashAnchor"><h2 id="datomic.api/tempid">tempid</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (tempid partition)
        (tempid partition n)
@@ -871,25 +871,25 @@ should specify a timeout.</pre>
 of a single transaction, tempids map consistently to permanent
 ids. Values of n from -1 to -1000000, inclusive, are reserved for
 user-created tempids.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/touch">touch</h2>
+  <a name="//apple_ref/cpp/Function/touch" class="dashAnchor"><a name="//apple_ref/cpp/Function/touch" class="dashAnchor"><h2 id="datomic.api/touch">touch</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (touch entity)
 </pre>
   <pre id="var-docstr">Touches all of the attributes of the entity, including any component entities recursively.
 Returns the entity.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/transact">transact</h2>
+  <a name="//apple_ref/cpp/Function/transact" class="dashAnchor"><a name="//apple_ref/cpp/Function/transact" class="dashAnchor"><h2 id="datomic.api/transact">transact</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (transact connection tx-data)
 </pre>
@@ -903,7 +903,7 @@ a data function. Each nested list starts with a keyword identifying
 the operation followed by the arguments for the operation.
 
 Returns a completed future that can be used to monitor the completion
-of the transaction. If the transaction commits, the future's value is
+of the transaction. If the transaction commits, the future&apos;s value is
 a map containing the following keys:
 
   :db-before         database value before the transaction
@@ -913,42 +913,42 @@ a map containing the following keys:
 
 The transaction id can be passed to as-of to get the database value
 as of the end of the transaction.
-If the transaction aborts, attempts to get the future's value
+If the transaction aborts, attempts to get the future&apos;s value
 throw a java.util.concurrent.ExecutionException, wrapping a
 java.lang.Error containing error information.
 If the transaction times out, the call to transact itself will
 throw a RuntimeException. The transaction timeout can be set
 via the system property datomic.txTimeoutMsec, and defaults to
 10000 (10 seconds).</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/transact-async">transact-async</h2>
+  <a name="//apple_ref/cpp/Function/transact-async" class="dashAnchor"><a name="//apple_ref/cpp/Function/transact-async" class="dashAnchor"><h2 id="datomic.api/transact-async">transact-async</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (transact-async connection tx-data)
 </pre>
   <pre id="var-docstr">Same as transact, but returns its future immediately.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/tx-&gt;t">tx-&gt;t</h2>
+  <a name="//apple_ref/cpp/Function/tx-&gt;t" class="dashAnchor"><a name="//apple_ref/cpp/Function/tx-&gt;t" class="dashAnchor"><h2 id="datomic.api/tx-&gt;t">tx-&gt;t</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (tx-&gt;t tx)
 </pre>
   <pre id="var-docstr">Return the t value associated with a transaction id.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/tx-range">tx-range</h2>
+  <a name="//apple_ref/cpp/Function/tx-range" class="dashAnchor"><a name="//apple_ref/cpp/Function/tx-range" class="dashAnchor"><h2 id="datomic.api/tx-range">tx-range</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (tx-range log start end)
 </pre>
@@ -960,13 +960,13 @@ number, transaction ID, Date or nil.
 Each transaction is a map with the following keys:
  :t - the T point of the transaction
  :data -  a Collection of the Datoms asserted/retracted by the transaction</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/tx-report-queue">tx-report-queue</h2>
+  <a name="//apple_ref/cpp/Function/tx-report-queue" class="dashAnchor"><a name="//apple_ref/cpp/Function/tx-report-queue" class="dashAnchor"><h2 id="datomic.api/tx-report-queue">tx-report-queue</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (tx-report-queue connection)
 </pre>
@@ -985,13 +985,13 @@ Reports are records with the following keys:
   :db-before    value of database before the transaction
   :db-after     value of database after the transaction
   :tx-data      the transaction data in E/A/V/Tx form.</pre>
-  
-  
-  
+
+
+
 </div><div id="var-entry">
   <br>
   <hr>
-  <h2 id="datomic.api/with">with</h2>
+  <a name="//apple_ref/cpp/Function/with" class="dashAnchor"><a name="//apple_ref/cpp/Function/with" class="dashAnchor"><h2 id="datomic.api/with">with</h2></a></a>
   <span id="var-type">function</span><br>
   <pre id="var-usage">Usage: (with db tx-data)
 </pre>
@@ -999,9 +999,9 @@ Reports are records with the following keys:
 applied in a transaction, but the source of the database is
 unaffected. Takes data in the same format expected by transact, and
 returns a map similar to the map returned by transact.</pre>
-  
-  
-  
+
+
+
 </div>
 
 
@@ -1014,10 +1014,10 @@ returns a map similar to the map returned by transact.</pre>
 	  <div style="text-align: center;" id="copyright">Copyright (c) Cognitect, Inc. All rights reserved.</div>
 	</div>
       </div>
-      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey&#39;s website." href="http://www.tomhickey.com/">Tom Hickey</a>.<br>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey&apos;s website." href="http://www.tomhickey.com/">Tom Hickey</a>.<br>
       Clojure auto-documentation system by Tom Faulhaber.</div>
     </div>
     <!-- /AllContentContainer -->
-  
+
 
 </body></html>
