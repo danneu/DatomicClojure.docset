@@ -1,0 +1,17 @@
+
+#leftColumn,
+#toc {
+    display: none;
+}
+
+#rightColumn {
+    margin-left: 20px;
+}
+
+#AllContentContainer {
+    max-width: none;
+}
+
+.wiki hr {
+    margin: 0;
+}
